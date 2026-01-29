@@ -4,9 +4,8 @@
 [![Streamlit](https://img.shields.io/badge/frontend-streamlit-ff4b4b.svg)](https://streamlit.io/)
 [![LangChain](https://img.shields.io/badge/framework-langchain-12d4a6.svg)](https://python.langchain.com/)
 [![CI/CD Status](https://github.com/Qamar-usman-ai/LinkedIn-Viral-Post-Generator-AI-Agent/actions/workflows/main.yml/badge.svg)](https://github.com/Qamar-usman-ai/LinkedIn-Viral-Post-Generator-AI-Agent/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An intelligent AI agent that analyzes live viral LinkedIn posts and generates high-engagement content using **LangChain ReAct Agents**, **Groq (Llama 3.3)**, and **Tavily Search**.
+An intelligent AI agent that researches live viral trends and generates high-engagement LinkedIn content using **LangChain ReAct Agents**, **Groq (Llama 3.3)**, and **Tavily Search**.
 
 
 
@@ -14,31 +13,31 @@ An intelligent AI agent that analyzes live viral LinkedIn posts and generates hi
 
 ## ✨ Features
 
-- 🔍 **Viral Post Analysis**: Scrapes and analyzes top-performing LinkedIn posts via real-time web search.
-- 📊 **Pattern Recognition**: Identifies high-converting hooks, spacing, and CTA structures.
-- ✍️ **AI Generation**: Creates optimized posts using Groq's ultra-fast Llama-3.3-70b model.
-- 🎯 **Multi-Tool Pipeline**: Uses a "Reasoning + Acting" (ReAct) framework to verify trends before writing.
-- 🖥️ **Professional UI**: Clean Streamlit dashboard with advanced configuration options.
-- 📈 **CI/CD Integrated**: Automated quality checks using Ruff (linting) and Pytest (testing).
+- 🔍 **Viral Post Analysis**: Scrapes and analyzes top-performing LinkedIn posts via live web search.
+- 📊 **Pattern Recognition**: Identifies high-converting hooks and content structures.
+- ✍️ **AI Generation**: Creates optimized posts using Groq's ultra-fast Llama 3.3 model.
+- 🎯 **ReAct Agent Pipeline**: Uses a "Reasoning + Acting" framework to verify trends before writing.
+- 🖥️ **Beautiful UI**: Professional Streamlit interface with "Click to Copy" and "Regenerate" features.
+- 🧪 **Automated CI/CD**: Integrated GitHub Actions for automated code quality and unit testing.
 
 ---
 
 ## 🏗️ Modular Architecture
 
-# LinkedIn Agent Pro
+This project follows a professional modular design to ensure scalability and ease of testing.
 
-linkedin-agent-pro/
-├── .github/workflows/       # 🤖 CI/CD: Automated testing & style checks
-├── app/                     # 🖥️ Interface: The Streamlit Web Dashboard
-├── src/                     # 🧠 The Brain: Core AI Logic & Tools
-│   ├── agent.py            # Agent initialization & ReAct logic
-│   ├── tools.py            # Custom skills (Tavily Search)
-│   └── prompts.py          # Expert personas & system instructions
-├── tests/                   # 🧪 Quality: Automated unit tests
-├── .env.example             # 🔐 Security: Template for API keys
-├── requirements.txt         # 📦 Dependencies: Required libraries
-└── README.md                # 📖 Documentation
-
+```text
+root/
+├── .github/workflows/   # 🤖 CI/CD: Automated Testing (GitHub Actions)
+├── app/                 # 🖥️ UI Layer: Streamlit Dashboard
+├── src/                 # 🧠 Logic Layer: The AI "Brain"
+│   ├── agent.py        # ReAct Agent Core Initialization
+│   ├── tools.py        # Specialized Search & Scraping Tools
+│   └── prompts.py      # Strategic System Personas
+├── tests/               # 🧪 Quality Control: Pytest Unit Tests
+├── .env.example         # 🔐 Security: API Key Template
+├── requirements.txt     # 📦 Dependencies: Required Libraries
+└── README.md            # 📖 Documentation
 **in:** Groq (Llama 3.3 70B)  
 **Orchestration:** LangChain  
 **Search Engine:** Tavily AI  
