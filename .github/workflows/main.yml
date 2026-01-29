@@ -22,15 +22,22 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install ruff pytest  # Tools for cleaning and testing
+          pip install ruff pytest 
 
       - name: Lint with Ruff
-        run: ruff check .  # Checks for code errors/style
+        run: ruff check .
 
       - name: Smoke Test
         run: |
-          # This simple test ensures the script can at least be imported/run
-          python -c "import linkedin_agent; print('Import successful')"
+          # We tell Python to look in the current directory for your file
+          # We use the EXACT name of your file: linkedin_agent_advanced
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          python -c "import linkedin_agent_advanced; print('Import successful')"
+
+      - name: Run Tests
+        run: |
+          # This will run any tests you added in the tests/ folder
+          pytest
 
   deploy:
     needs: quality-check
