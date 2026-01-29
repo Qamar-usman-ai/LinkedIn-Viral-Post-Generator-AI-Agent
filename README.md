@@ -40,8 +40,7 @@ linkedin-agent-pro/
 ├── requirements.txt         # 📦 Dependencies: Required libraries
 └── README.md                # 📖 Documentation
 
-🛠️ Tech Stack
-Brain: Groq (Llama 3.3 70B)
+in: Groq (Llama 3.3 70B)
 
 Orchestration: LangChain
 
@@ -52,31 +51,47 @@ UI Framework: Streamlit
 Automation: GitHub Actions (Ruff & Pytest)
 
 🚀 Quick Start
-1. Prerequisites
+
+1\. Prerequisites
+
 Python 3.11 or higher.
 
 Groq API Key (Free).
 
 Tavily API Key (Free).
 
-2. Installation
+2\. Installation
+
 Bash
-# Clone the repository
-git clone [https://github.com/Qamar-usman-ai/LinkedIn-Viral-Post-Generator-AI-Agent.git](https://github.com/Qamar-usman-ai/LinkedIn-Viral-Post-Generator-AI-Agent.git)
+
+\# Clone the repository
+
+git clone \[https://github.com/Qamar-usman-ai/LinkedIn-Viral-Post-Generator-AI-Agent.git\](https://github.com/Qamar-usman-ai/LinkedIn-Viral-Post-Generator-AI-Agent.git)
+
 cd LinkedIn-Viral-Post-Generator-AI-Agent
 
-# Install dependencies
+\# Install dependencies
+
 pip install -r requirements.txt
-3. Configuration
+
+3\. Configuration
+
 Create a .env file in the root directory:
 
 Bash
+
 cp .env.example .env
-# Edit .env and add your GROQ_API_KEY and TAVILY_API_KEY
-4. Run Application
+
+\# Edit .env and add your GROQ\_API\_KEY and TAVILY\_API\_KEY
+
+4\. Run Application
+
 Bash
-streamlit run app/streamlit_app.py
+
+streamlit run app/streamlit\_app.py
+
 🎯 How It Works
+
 The agent uses a 4-step pipeline to ensure quality:
 
 Step 1: Scrape Viral Posts: Analyzes top-performing posts in your niche using live search.
@@ -88,17 +103,23 @@ Step 3: Content Generation: Applies proven viral structures using the Groq LLM.
 Step 4: Optimization: Refines the Hook and CTA for maximum readability and reach.
 
 🧪 Testing & Quality Control
+
 We maintain a "Green Checkmark" standard for code quality.
 
 Run tests locally:
 
 Bash
+
 pytest tests/
+
 Check code style:
 
 Bash
+
 ruff check .
+
 🔐 Security & Ethics
+
 No Hardcoded Keys: Never commit your API keys. Use environment variables.
 
 Rate Limiting: Be mindful of API limits when scraping/searching.
@@ -108,6 +129,7 @@ Respect Terms: Adhere to LinkedIn’s Terms of Service regarding automation and 
 Be Authentic: Always review and edit AI-generated content to match your personal voice.
 
 🐛 Troubleshooting
+
 "Module not found" error: Run pip install -r requirements.txt.
 
 "Invalid API key" error: Verify your keys in the .env file or sidebar.
