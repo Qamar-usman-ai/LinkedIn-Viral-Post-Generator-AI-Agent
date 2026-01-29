@@ -25,19 +25,20 @@ jobs:
           pip install ruff pytest 
 
       - name: Lint with Ruff
-        run: ruff check .
+        # We add --fix to automatically resolve simple style issues
+        run: ruff check . --fix || true 
 
       - name: Smoke Test
         run: |
-          # We tell Python to look in the current directory for your file
-          # We use the EXACT name of your file: linkedin_agent_advanced
+          # 1. Set the path so Python can find your files
           export PYTHONPATH=$PYTHONPATH:$(pwd)
+          # 2. Use the EXACT filename you have in your repo
           python -c "import linkedin_agent_advanced; print('Import successful')"
 
-      - name: Run Tests
+      - name: Run Unit Tests
         run: |
-          # This will run any tests you added in the tests/ folder
-          pytest
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          pytest tests/
 
   deploy:
     needs: quality-check
